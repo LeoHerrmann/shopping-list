@@ -1,14 +1,20 @@
- {% extends "base.html" %}
+{% extends "base.html" %}
+
+
 
 {% block title%}
 Listen
 {% endblock %}
 
+
+
 {% block content %}
+
 <div>
 	<!--
 	<div class="text-center mt-3">
 		<p>Hier wird in Zukunft die Liste von Einkaufslisten sein.</p>
+
 		<button type="button" class="btn btn-primary">Neue Einkaufslite erstellen</button>
 	</div>
 	-->
@@ -49,6 +55,9 @@ Listen
 			</div>
 		</div>
 	</div>
+
+	<button type="button" class="btn btn-primary mt-2">Neue Einkaufslite erstellen</button>
+
 </div>
 
 <div class="modal" id="list-context">
@@ -73,11 +82,12 @@ Listen
 </div>
 
 <script>
-var myModal = document.getElementById('list-edit-modal');
-var myInput = document.getElementById('myInput');
+	var myModal = document.getElementById('list-edit-modal');
+	var myInput = document.getElementById('myInput');
 
-myModal.addEventListener('shown.bs.modal', function () {
-  myInput.focus();
-});
+	myModal.addEventListener('shown.bs.modal', function () {
+	  myInput.focus();
+	});
 </script>
+
 {% endblock %}
